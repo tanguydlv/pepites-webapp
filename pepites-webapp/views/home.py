@@ -6,7 +6,5 @@ from pepites_webapp import app
 def home_page():
         return render_template(
             "home.html",
-            logo_name="Pépites",
-            navbar_color="#1D809F",
-            login=False
+            navbar_color='#1D809F',
         )

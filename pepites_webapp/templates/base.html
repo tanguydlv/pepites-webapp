@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    {% block head %}
+    {% endblock %}
+    {% block styles %}
+        <!-- Bootstrap Core CSS -->
+        <link type="text/css" rel="stylesheet" href="/static/styles/bootstrap.min.css" />
+        <!-- Custom CSS -->
+        <link href="/static/styles/stylish-portfolio.min.css" rel="stylesheet">
+    {% endblock %}
+    {% block scripts %}
+        <script src="/static/scripts/jquery-3.3.1.slim.min.js"></script>
+        <script src='/static/scripts/popper.min.js'></script>
+        <script src="/static/scripts/bootstrap.min.js"></script>
+    {% endblock %}
+    {% block fonts %}
+        <!-- Custom Fonts -->
+        <link href="/static/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+        <link href="/static/vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+    {% endblock %}
+    <title> {% block title %} Pépites {% endblock %} </title>
+  </head>
+  <body>
+    {% block body %}
+    <!-- Flash messages -->
+    {% with messages = get_flashed_messages(with_categories=True) %}
+      {% if messages %}
+        <script>
+          toastr.options = {
+              positionClass: "toast-top-left",
+              progressBar: true,
+          }
+          {% for category, message in messages %}
+            toastr.{{ category if category != 'message' else 'info'}}("{{ message }}").css("width", "20vw");
+          {% endfor %}
+        </script>
+      {% endif %}
+    {% endwith %}
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top text-uppercase" style="background-color: {{ navbar_color }};">
+      <div class="container">
+        <a class="navbar-brand text-white js-scroll-trigger" href="/">{{ logo_name }}</a>
+        <button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            {% if login %}
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 text-white rounded js-scroll-trigger" href="/login">Login</a>
+            </li>
+            {% else %}
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 text-white rounded js-scroll-trigger" href="/profil">Profil</a>
+            </li>
+            {% endif %}
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+    <div id="content-login" class="row">
+       {% block content %}
+       {% endblock %}
+    </div>
+    {% endblock %}
+  </body>
+
+</html>
