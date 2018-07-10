@@ -1,0 +1,29 @@
+runtime: custom
+env: flex
+
+service: default
+manual_scaling:
+  instances: 1
+resources:
+  cpu: 1
+  memory_gb: 0.5
+  disk_size_gb: 10
+
+env_variables:
+  FLASK_APP: "pepites_webapp:app"
+  API_URL: ""
+  DATABASE_URL: ""
+  SENDGRID_API_KEY: ""
+  FLASK_SECRET_KEY: ""
+  WTF_CSRF_SECRET_KEY: ""
+  RECAPTCHA_PUBLIC_KEY: ""
+  RECAPTCHA_PRIVATE_KEY: ""
+  SLACK_CHANNEL: ""
+  SLACK_URL: ""
+
+beta_settings:
+  cloud_sql_instances: ""
+
+handlers:
+  - url: /.*
+    secure: always
