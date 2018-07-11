@@ -8,5 +8,5 @@ def home_page():
             "home.html",
             logo_name="Pépites",
             navbar_color="#1D809F",
-            login=False
+            login=True
         )

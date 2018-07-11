@@ -28,7 +28,7 @@ bcrypt = Bcrypt(app)
 login_manager = LoginManager()
 login_manager.init_app(app)
 
-#from pepites_webapp.models import *
+from pepites_webapp.models import *
 from pepites_webapp.views import *
 from pepites_webapp.forms import *
 
