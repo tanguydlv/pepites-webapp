@@ -20,6 +20,7 @@
     <link href="/static/vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
 
     <!-- Custom CSS -->
+    <link href="/static/styles/agency.css" rel="stylesheet">
     <link href="/static/styles/stylish-portfolio.css" rel="stylesheet">
 
   </head>
@@ -32,22 +33,16 @@
     <nav id="sidebar-wrapper">
       <ul class="sidebar-nav">
         <li class="sidebar-brand">
-          <a class="js-scroll-trigger" href="#page-top">Start Bootstrap</a>
+          <a class="js-scroll-trigger" href="#page-top">MaPépinière</a>
         </li>
         <li class="sidebar-nav-item">
-          <a class="js-scroll-trigger" href="#page-top">Home</a>
+          <a class="js-scroll-trigger" href="#concept">Le Concept</a>
         </li>
         <li class="sidebar-nav-item">
-          <a class="js-scroll-trigger" href="#about">About</a>
+          <a class="js-scroll-trigger" href="#about">Comment ca marche ?</a>
         </li>
         <li class="sidebar-nav-item">
-          <a class="js-scroll-trigger" href="#services">Services</a>
-        </li>
-        <li class="sidebar-nav-item">
-          <a class="js-scroll-trigger" href="#portfolio">Portfolio</a>
-        </li>
-        <li class="sidebar-nav-item">
-          <a class="js-scroll-trigger" href="#contact">Contact</a>
+          <a class="js-scroll-trigger" href="#team">L'équipe</a>
         </li>
       </ul>
     </nav>
@@ -59,14 +54,14 @@
         <h3 class="mb-5">
           <em>Partagez votre pépite et découvrez celles qui vous entourent</em>
         </h3>
-        <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Je créer ma pépinière</a>
-        <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Je rejoind une pépinière</a>
+        <a class="btn btn-primary btn-xl js-scroll-trigger" href="/home">Je créer ma pépinière</a>
+        <a class="btn btn-primary btn-xl js-scroll-trigger" href="#">Je rejoind une pépinière</a>
       </div>
       <div class="overlay"></div>
     </header>
 
     <!-- About -->
-    <section class="content-section bg-light" id="about">
+    <section class="content-section bg-light">
       <div class="container text-center">
         <div class="row">
           <div class="col-lg-10 mx-auto">
@@ -82,58 +77,47 @@
     <!-- Services -->
     <section class="content-section bg-primary text-white text-center" id="services">
       <div class="container">
-        <div class="content-section-heading">
-          <h3 class="text-secondary mb-0">Concept</h3>
-          <h2 class="mb-5">Ce que nous vous proposons</h2>
-        </div>
         <div class="row">
-          <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+          <div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
             <span class="service-icon rounded-circle mx-auto mb-3">
-              <i class="icon-screen-smartphone"></i>
+              <i class="icon-heart"></i>
             </span>
             <h4>
-              <strong>Responsive</strong>
+              <strong>Aidez les autres</strong>
             </h4>
-            <p class="text-faded mb-0">Looks great on any screen size!</p>
+            <p class="text-faded mb-0">Participez au financement d'une association de votre choix.</br>
+            1 pépite = 10 euros</p>
           </div>
-          <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+          <div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
             <span class="service-icon rounded-circle mx-auto mb-3">
-              <i class="icon-pencil"></i>
+              <i class="icon-people"></i>
             </span>
             <h4>
-              <strong>Redesigned</strong>
-            </h4>
-            <p class="text-faded mb-0">Freshly redesigned for Bootstrap 4.</p>
+                <strong>Rencontrer</strong>
+              </h4>
+              <p class="text-faded mb-0">Participer à une pépite c'est apprendre quelque chose mais aussi 
+                échanger avec un petit groupe de pationnés.
+              </p>
           </div>
-          <div class="col-lg-3 col-md-6 mb-5 mb-md-0">
+          <div class="col-lg-4 col-md-6 mb-5 mb-md-0">
             <span class="service-icon rounded-circle mx-auto mb-3">
-              <i class="icon-like"></i>
+              <i class="icon-trophy"></i>
             </span>
             <h4>
-              <strong>Favorited</strong>
-            </h4>
-            <p class="text-faded mb-0">Millions of users
-              <i class="fa fa-heart"></i>
-              Start Bootstrap!</p>
+                <strong>Apprendre à vous connaitre</strong>
+              </h4>
+              <p class="text-faded mb-0">Tout le monde à une pépite au fond de soit, c'est l'occasion
+                de la révéler aux autres. 
+              </p>
           </div>
-          <div class="col-lg-3 col-md-6">
-            <span class="service-icon rounded-circle mx-auto mb-3">
-              <i class="icon-mustache"></i>
-            </span>
-            <h4>
-              <strong>Question</strong>
-            </h4>
-            <p class="text-faded mb-0">I mustache you a question...</p>
-          </div>
-        </div>
       </div>
     </section>
 
-    <!-- Callout -->
-    <section class="callout">
+    <!-- Concept -->
+    <section class="callout" id="concept">
       <div class="container text-center col-8">
         <h2 class="mx-auto mb-5">Le concept</h2>
-        <p>LesPépites c’est un levier de création de lien social entre les membres d’une communauté.</br>
+        <p>Les Pépites c’est un levier de création de lien social entre les membres d’une communauté.</br>
         Consciemment ou non, nous faisons partie de plusieurs communautés : celle de notre
         immeuble, de notre rue, de notre quartier ou de notre ville, celle de notre entreprise, celle de
         notre association, celle des parents d’élèves, celle de notre club de sport, celle du bus 248…
@@ -163,6 +147,124 @@
         récolte de fond au profit d’une association. Dans la plupart des cas, la pépinière est créée
         par une association pour créer du lien entre ses membres et récolter des fonds.</p>
         <a class="btn btn-primary btn-xl" href="/">Je créer ma pépinière</a>
+      </div>
+    </section>
+
+
+  <!-- About -->
+  <section class="content-section bg-light" id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading text-uppercase">Comment ca marche ?</h2>
+            <h3 class="section-subheading text-muted">Voici les différentes étapes à suivre</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <ul class="timeline">
+              <li>
+                <div class="timeline-image">
+                  <img class="rounded-circle img-fluid" src="img/about/1.jpg" alt="">
+                </div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h5>Etape 1</h5>
+                    <h4 class="subheading">Créez votre Pépinière</h4>
+                  </div>
+                  <div class="timeline-body">
+                    <p class="text-muted">Proposez à votre association, votre entreprise, votre école, votre
+                        immeuble, votre quartier, votre ville, votre famille, votre club de sport de
+                        créer une Pépinière : une communauté d’échange de pépites.
+                        Il vous suffira ensuite de quelques clics sur notre site pour donner vie à
+                        cette pépinière, ajouter ses membres, communiquer dessus etc.</p>
+                  </div>
+                </div>
+              </li>
+              <li class="timeline-inverted">
+                <div class="timeline-image">
+                  <img class="rounded-circle img-fluid" src="img/about/2.jpg" alt="">
+                </div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                      <h5>Etape 2</h5>
+                    <h4 class="subheading">Rassemblez un maximum de Pépites</h4>
+                  </div>
+                  <div class="timeline-body">
+                    <p class="text-muted">Tout au long de l’année, nous vous aidons à communiquer sur la Pépinière 
+                      et motiver ses membres à proposer leur(s) pépite(s) : « Apprendre à tricoter un bonnet », 
+                      « Visite guidée du musée d’Orsay », « Coaching sportif », « Atelier confitures », 
+                      « Relire Marx au 21ème siècle », « Le CV parfait », « Manucure / Pédicure », 
+                      « Le bricolage pour les nuls », « Le meilleur Couscous de Paris », « Initiation au Shiatsu »… 
+                      </p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="timeline-image">
+                  <img class="rounded-circle img-fluid" src="img/about/3.jpg" alt="">
+                </div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                      <h5>Etape 3</h5>
+                    <h4 class="subheading">Organisez le Pépite Day</h4>
+                  </div>
+                  <div class="timeline-body">
+                    <p class="text-muted">Ce sera le rendez-vous annuel lors duquel les membres de la pépinière 
+                      pourront acheter des Pépites, pour eux-mêmes ou pour leurs proches. 
+                      1 pépite = 10 euros, reversés à une association, ou à la communauté elle-même, 
+                      si c’est une organisation à but non lucratif. 
+                      Pour faciliter son organisation, le Pépite Day a généralement lieu lors d’un évènement 
+                      de la communauté : la soirée de noël de l’entreprise, la fête des voisins, la fête de l’école…
+                      </p>
+                  </div>
+                </div>
+              </li>
+              <li class="timeline-inverted">
+                <div class="timeline-image">
+                  <img class="rounded-circle img-fluid" src="img/about/4.jpg" alt="">
+                </div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                      <h5>Etape 4</h5>
+                    <h4 class="subheading">Réalisez vos Pépites</h4>
+                  </div>
+                  <div class="timeline-body">
+                    <p class="text-muted">Le lendemain du Pépites Day, nous nous occupons de tout ! 
+                      Nous mettons en contact les proposeurs de pépites et les acheteurs de pépites, 
+                      nous assurons un suivi régulier des pépites réalisées, relançons les retardataires, 
+                      et communiquons le taux de réalisation sur le mur de la pépinière.</p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                  <div class="timeline-image">
+                    <img class="rounded-circle img-fluid" src="img/about/3.jpg" alt="">
+                  </div>
+                  <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h5>Etape 5</h5>
+                      <h4 class="subheading">Rendez-vous au prochain Pépites Day ?</h4>
+                    </div>
+                    <div class="timeline-body">
+                      <p class="text-muted">La pépinière prend alors vie et s’anime, 
+                        les membres de la pépinière se rencontrent pour réaliser les pépites, 
+                        ils apprennent à se connaître, ils partagent et s’entraident. 
+                        C’est parti pour l’organisation du prochain Pépites Day ! 
+                        </p>
+                    </div>
+                  </div>
+                </li>
+              <li class="timeline-inverted">
+                <div class="timeline-image">
+                  <h4>Be Part
+                    <br>Of Our
+                    <br>Story!</h4>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -227,7 +329,7 @@
     </section>
 
     <!-- Team -->
-    <section class="content-section bg-primary text-white text-center">
+    <section class="content-section bg-primary text-white text-center" id="team">
       <div class="container">
         <div class="content-section-heading">
           <h2 class="mb-5">Notre équipe</h2>
@@ -323,14 +425,14 @@
     </a>
 
     <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/vendor/jquery/jquery.min.js"></script>
+    <script src="/static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Plugin JavaScript -->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="/static/vendor/jquery-easing/jquery.easing.min.js"></script>
 
     <!-- Custom scripts for this template -->
-    <script src="js/stylish-portfolio.min.js"></script>
+    <script src="/static/js/stylish-portfolio.min.js"></script>
 
   </body>
 
