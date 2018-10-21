@@ -11,9 +11,6 @@ try:
     FLASK_SECRET_KEY = os.environ.get('FLASK_SECRET_KEY')
     WTF_CSRF_SECRET_KEY = os.environ.get('WTF_CSRF_SECRET_KEY', FLASK_SECRET_KEY)
 
-    RECAPTCHA_PUBLIC_KEY = os.environ['RECAPTCHA_PUBLIC_KEY']
-    RECAPTCHA_PRIVATE_KEY = os.environ['RECAPTCHA_PRIVATE_KEY']
-
     SLACK_CHANNEL = os.environ['SLACK_CHANNEL']
     SLACK_URL = os.environ['SLACK_URL']
 

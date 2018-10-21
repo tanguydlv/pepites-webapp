@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+
+{% block title %}Proposer ma pépite{% endblock %}
+{% block content %}
+<section class="content-section">
+  <div class="row">
+    <div class="col-lg-12 text-center">
+      <h2 class="text-uppercase">Créer ma pépite</h2>
+    </div>
+  </div>
+  <div class="row margin_top">
+    <div class="col-xl-6 mx-auto text-left">
+      <form method="post">
+        {{ form.csrf_token }}
+        <div class="form-group">
+            {{ form.title.label }}
+            {{ form.title(placeholder="Titre", class_='form-control is-invalid' if 'title' in errors else 'required form-control') }}
+            {% if 'title' in errors %}
+              <div class="invalid-feedback">
+                {{ errors['title'][0] }}
+              </div>
+            {% endif %}
+          </div>
+          <div class="form-group">
+              {{ form.description.label }}
+              {{ form.description(placeholder="Description", class_='form-control is-invalid' if 'description' in errors else 'required form-control') }}
+              {% if 'description' in errors %}
+                <div class="invalid-feedback">
+                  {{ errors['description'][0] }}
+                </div>
+              {% endif %}
+          </div>
+          <div class="form-group">
+              {{ form.categorie.label }}
+              {{ form.categorie(placeholder="Catégorie", class_='form-control is-invalid' if 'categorie' in errors else 'required form-control') }}
+              {% if 'categorie' in errors %}
+                <div class="invalid-feedback">
+                  {{ errors['categorie'][0] }}
+                </div>
+              {% endif %}
+          </div>
+          <div class="form-group">
+              {{ form.nb_session.label }}
+              {{ form.nb_session(placeholder="Nombre de session", class_='form-control is-invalid' if 'nb_session' in errors else 'required form-control') }}
+              {% if 'nb_session' in errors %}
+                <div class="invalid-feedback">
+                  {{ errors['nb_session'][0] }}
+                </div>
+              {% endif %}
+          </div>
+          <div class="form-group">
+              {{ form.nb_participant.label }}
+              {{ form.nb_participant(placeholder="Nombre de participants", class_='form-control is-invalid' if 'nb_participant' in errors else 'required form-control') }}
+              {% if 'nb_participant' in errors %}
+                <div class="invalid-feedback">
+                  {{ errors['nb_participant'][0] }}
+                </div>
+              {% endif %}
+          </div>
+          <div class="form-group">
+              {{ form.lieu.label }}
+              {{ form.lieu(placeholder="Lieu (ville)", class_='form-control is-invalid' if 'lieu' in errors else 'required form-control') }}
+              {% if 'lieu' in errors %}
+                <div class="invalid-feedback">
+                  {{ errors['lieu'][0] }}
+                </div>
+              {% endif %}
+          </div>
+          <div class="margin_top_large">
+            <p>Ces informations resteront privées jusqu'à la prise de contact: </p>
+          </div>
+          <div class="form-group">
+              {{ form.prenom.label }}
+              {{ form.prenom(placeholder="Prenom", class_='form-control is-invalid' if 'prenom' in errors else 'required form-control') }}
+              {% if 'prenom' in errors %}
+                <div class="invalid-feedback">
+                  {{ errors['prenom'][0] }}
+                </div>
+              {% endif %}
+          </div>
+          <div class="form-group">
+              {{ form.nom.label }}
+              {{ form.nom(placeholder="Nom", class_='form-control is-invalid' if 'nom' in errors else 'required form-control') }}
+              {% if 'nom' in errors %}
+                <div class="invalid-feedback">
+                  {{ errors['nom'][0] }}
+                </div>
+              {% endif %}
+          </div>
+          <div class="form-group">
+              {{ form.numero.label }}
+              {{ form.numero(placeholder="Numéro de téléphone", class_='form-control is-invalid' if 'numero' in errors else 'required form-control') }}
+              {% if 'numero' in errors %}
+                <div class="invalid-feedback">
+                  {{ errors['numero'][0] }}
+                </div>
+              {% endif %}
+          </div>
+          <div class="text-center margin_top_large">
+            <button type="submit" class="btn btn-primary">Proposer</button>
+          </div>
+          </div>
+      </form>
+    </div>
+  </div>
+</section>
+{% endblock %}

@@ -49,8 +49,6 @@ docker run \
     -e API_URL=http://localhost:$PORT \
     `# Do not panic, the key below is the dev key and has limited access` \
     -e SENDGRID_API_KEY=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  \
-    -e RECAPTCHA_PUBLIC_KEY=6LfZDlcUAAAAAFCm9PHejyawJKW9y57G2C_5JOjL \
-    -e RECAPTCHA_PRIVATE_KEY=6LfZDlcUAAAAAJHBf4cvsr8rjTwlllOHGkQgWHxb \
     -e REDIRECT_SCHEME=http \
     -e SLACK_CHANNEL= \
     -e SLACK_URL= \

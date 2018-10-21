@@ -26,39 +26,27 @@
   </head>
   <body>
     <!-- Flash messages -->
-    {% with messages = get_flashed_messages(with_categories=True) %}
-      {% if messages %}
-        <script>
-          toastr.options = {
-              positionClass: "toast-top-left",
-              progressBar: true,
-          }
-          {% for category, message in messages %}
-            toastr.{{ category if category != 'message' else 'info'}}("{{ message }}").css("width", "20vw");
+      {% with messages = get_flashed_messages() %} {% if messages %}
+      <ul class=flashes>
+          {% for message in messages %}
+          <li>{{ message }}</li>
           {% endfor %}
-        </script>
-      {% endif %}
-    {% endwith %}
+      </ul>
+      {% endif %} {% endwith %}
+      
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg fixed-top text-uppercase" style="background-color: {{ navbar_color }};">
+    <nav class="navbar navbar-expand-lg fixed-top text-uppercase" style="background-color: #1D809F;">
       <div class="container">
-        <a class="navbar-brand text-white js-scroll-trigger" href="/">{{ logo_name }}</a>
+        <a class="navbar-brand text-white js-scroll-trigger" href="/">Pépites</a>
         <button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           Menu
           <i class="fa fa-bars"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
-            {% if not login %}
+            {% if login %}
             <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 text-white rounded js-scroll-trigger" href="/login">Login</a>
-            </li>
-            {% else %}
-            <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 text-white rounded js-scroll-trigger" href="/profil">Profil</a>
-            </li>
-            <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 text-white rounded js-scroll-trigger" href="/login">Logout</a>
+              <a class="nav-link py-3 px-0 px-lg-3 text-white rounded js-scroll-trigger" href="/login">Déconnexion</a>
             </li>
             {% endif %}
           </ul>

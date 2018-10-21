@@ -13,10 +13,7 @@ def login_page():
     form = forms.LoginForm()
     return render_template(
         "login.html",
-        form=form,
-        logo_name="Pépites",
-        navbar_color="#1D809F",
-        login=False
+        form=form
     )
 
 
@@ -89,7 +86,7 @@ def login_post():
             db.session.add(user)
             db.session.commit()
             flash('You are now logged in.', 'success')
-            return redirect(url_for('home'))
+            return redirect(url_for('home_page'))
         else:
             flash('Error while logging in.', 'error')
             return render_template(
@@ -97,6 +94,7 @@ def login_post():
                 form=form
             )
     else:
+        flash('Error while logging in.', 'error')
         return render_template(
             'login.html',
             form=form,
@@ -110,4 +108,4 @@ def logout():
     app.logger.info(f'User {current_user.id} has logged out.')
     logout_user()
     flash('You have been logged out.', 'info')
-    return redirect(url_for('index_page'))
+    return redirect(url_for('accueil_page'))

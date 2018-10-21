@@ -2,6 +2,10 @@
   margin-top: 20px;
 }
 
+.margin_top_large {
+  margin-top: 50px;
+}
+
 .team-member {
   margin-bottom: 50px;
   text-align: center;

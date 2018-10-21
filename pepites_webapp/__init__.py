@@ -13,8 +13,6 @@ def make_app():
     app.config['WTF_CSRF_SECRET_KEY'] = conf.WTF_CSRF_SECRET_KEY
     app.config['SQLALCHEMY_DATABASE_URI'] = conf.DATABASE_URL
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-    app.config['RECAPTCHA_PUBLIC_KEY'] = conf.RECAPTCHA_PUBLIC_KEY
-    app.config['RECAPTCHA_PRIVATE_KEY'] = conf.RECAPTCHA_PRIVATE_KEY
     app.config['REMEMBER_COOKIE_SECURE'] = True
     app.config['REMEMBER_COOKIE_HTTPONLY'] = True
     return app
@@ -27,6 +25,7 @@ bcrypt = Bcrypt(app)
 
 login_manager = LoginManager()
 login_manager.init_app(app)
+login_manager.login_view = "login_page"
 
 from pepites_webapp.models import *
 from pepites_webapp.views import *
